@@ -125,7 +125,7 @@ public class ChatAdapter extends RecyclerView.Adapter{
            String time[]  = new Date(model.getTimeStamp()).toString().split(" ");
            String split[] = time[3].split(":");
            ((RecieverViewHolder)holder).recieverMsg.setText(model.getMessage());
-           ((RecieverViewHolder)holder).recieverMsg.setText(split[0]+":"+split[1]);
+           ((RecieverViewHolder)holder).reciverTime.setText(split[0]+":"+split[1]);
        }
 
     }
