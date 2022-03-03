@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewHolder>{
 
@@ -64,6 +65,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewHolder>{
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
                         holder.lastMessage.setText(dataSnapshot.child("message").getValue(String.class));
+                        String time[]  = new Date(dataSnapshot.child("timeStamp").getValue(Long.class)).toString().split(" ");
+                        String split[] = time[3].split(":");
+                        holder.time.setText(split[0]+":"+split[1]);
 
                     }
 
@@ -100,7 +104,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewHolder>{
     public class viewHolder extends RecyclerView.ViewHolder{
 
         ImageView profilePic;
-        TextView userName,lastMessage;
+        TextView userName,lastMessage,time;
 
 
         public viewHolder(@NonNull View itemView) {
@@ -109,6 +113,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewHolder>{
             profilePic = itemView.findViewById(R.id.profile_image);
             userName = itemView.findViewById(R.id.userNameList);
             lastMessage = itemView.findViewById(R.id.lastMessageList);
+            time = itemView.findViewById(R.id.timeList);
 
         }
     }

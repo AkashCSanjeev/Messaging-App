@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ChatAdapter extends RecyclerView.Adapter{
 
@@ -108,7 +109,11 @@ public class ChatAdapter extends RecyclerView.Adapter{
                Picasso.get().load(model.getImageURL()).into(((SenderViewHolder) holder).senderBinding.image);
            }
 
+           String time[]  = new Date(model.getTimeStamp()).toString().split(" ");
+           String split[] = time[3].split(":");
+
            ((SenderViewHolder)holder).senderMsg.setText(model.getMessage());
+           ((SenderViewHolder)holder).senderTime.setText(split[0]+":"+split[1]);
        }else{
 
            if(model.getMessage().equals("photo")){
@@ -117,7 +122,10 @@ public class ChatAdapter extends RecyclerView.Adapter{
                Picasso.get().load(model.getImageURL()).into(((RecieverViewHolder) holder).receiverBinding.image);
            }
 
+           String time[]  = new Date(model.getTimeStamp()).toString().split(" ");
+           String split[] = time[3].split(":");
            ((RecieverViewHolder)holder).recieverMsg.setText(model.getMessage());
+           ((RecieverViewHolder)holder).recieverMsg.setText(split[0]+":"+split[1]);
        }
 
     }
