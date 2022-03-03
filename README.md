@@ -2,7 +2,7 @@
 Messaging app similar to WhatsApp using Firebase
 
 #### Login Page
-<img src="Screenshots/sign_in.jpg" width="200" title="Sign In Activity">  <img src="Screenshots/sign_up.jpg" width="200" title="Sign Up Activity">  
+<img src="Screenshots/sign_in.jpg" width="200" title="Sign In Activity">  <img src="Screenshots/sign_up.jpg" width="200" title="Sign Up Activity">  <img src="Screenshots/phone_number.jpg" width="200" title="Phone Activity">  <img src="Screenshots/otp.jpg" width="200" title="OTP">  
 
 #### Main
 <img src="Screenshots/main1.jpg" width="200" title="Main Activity">  <img src="Screenshots/main2.jpg" width="200" title="Main Activity">  
