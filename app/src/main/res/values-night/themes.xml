@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WhatsappClone" parent="Theme.MaterialComponents">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#075E54</item>
+        <item name="colorPrimaryVariant"> #075E54</item>
+        <item name="colorOnPrimary"> #075E54</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary"> #075E54</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#06534A</item>
+        <!-- Customize your theme here. -->
+<!--        <item name="android:action"> #075E54</item>-->
+    </style>
+
+
+</resources>
